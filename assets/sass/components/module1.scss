@@ -1,0 +1,12 @@
+.design8 {
+    .module1 {
+        padding-top: 6px;
+        padding-bottom: 42px;
+        .popular-names {
+            margin-bottom: 11px;
+        }
+        &__message {
+            color: var(--color-title);
+        }
+    }
+}
