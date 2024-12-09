@@ -1,68 +1,118 @@
 .design8 {
-    .popular-names {
-        display: flex;
-        flex-direction: column;
-        &__wrapper {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        &__block {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            padding: 18px 16px 14px 20px;
-            border-bottom: 1px solid #cecece;
-            &-wrap {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                @include media('sm') {
-                    gap: 10px;
-                }
-            }
-            &-name {
-                display: flex;
-                align-items: flex-end;
-                gap: 8px;
-                .count {
-                    font-family: var(--four-family);
-                    font-weight: 350;
-                    font-size: 12px;
-                    color: #7c7c7c;
-                    display: inline-block;
-                    padding-bottom: 3px;
-                }
-                .name {
-                    font-family: var(--four-family);
-                    font-weight: 350;
-                    font-size: 20px;
-                    color: #333;
-                }
-            }
-            &-heart {
-                display: flex;
-                flex-shrink: 0;
-            }
-            @include media('sm') {
-                padding: 18px 10px 14px 10px;
-            }
-        }
-        &__more {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 16px;
-            padding: 18px 16px 14px 20px;
-            font-family: var(--four-family);
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 133%;
-            letter-spacing: 0.2em;
-            color: #333;
-            min-height: 56px;
-            box-sizing: border-box;
-        }
+  .popular-names {
+    display: flex;
+    flex-direction: column;
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
+    &__block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 18px 16px 14px 20px;
+      border-bottom: 1px solid #cecece;
+      &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include media('sm') {
+          gap: 10px;
+        }
+      }
+      &-name {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        .count {
+          font-family: var(--four-family);
+          font-weight: 350;
+          font-size: 12px;
+          color: #7c7c7c;
+          display: inline-block;
+          padding-bottom: 3px;
+        }
+        .name {
+          font-family: var(--four-family);
+          font-weight: 350;
+          font-size: 20px;
+          color: #333;
+        }
+      }
+      &-heart {
+        display: flex;
+        flex-shrink: 0;
+      }
+      @include media('sm') {
+        padding: 18px 10px 14px 10px;
+      }
+    }
+    &__more {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 16px 14px 20px;
+      font-family: var(--four-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 133%;
+      letter-spacing: 0.2em;
+      color: #333;
+      min-height: 56px;
+      box-sizing: border-box;
+    }
+  }
+  .popular-names_similar {
+    .popular-names {
+      &__wrapper {
+        gap: initial;
+      }
+      &__block-wrap {
+        gap: 16px;
+      }
+      &__block {
+        padding: 15px 0;
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+      &__block-name {
+        gap: 7px;
+        .count {
+          font-weight: 300;
+          padding-bottom: 2px;
+          color: #333333;
+          line-height: normal;
+        }
+        .name {
+          font-weight: 300;
+          letter-spacing: 0.025em;
+          line-height: normal;
+        }
+      }
+      &__block-heart svg {
+        fill: #d5465c;
+        .fill {
+          opacity: 0;
+        }
+      }
+      &__arrow {
+        transform: translateX(-5px);
+      }
+      &__more {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+      &__more-link {
+        display: inline-flex;
+        align-items: flex-end;
+        color: #333333;
+      }
+      &__more-text {
+        font-weight: 500;
+      }
+    }
+  }
 }

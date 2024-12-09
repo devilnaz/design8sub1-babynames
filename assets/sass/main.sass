@@ -20,6 +20,7 @@
 
 // sections
 @import 'components/header'
+@import 'components/banner-horizontal'
 @import 'components/module-home'
 @import 'components/module1'
 @import 'components/module2'
@@ -42,7 +43,11 @@
     @include media('md')
       padding: var(--gap-main-mobile)
     &_header
-      padding-bottom: 41px
+      padding-top: 13px
+      padding-bottom: 0
+    &_banner-horizontal
+      padding-top: 0
+      padding-bottom: 39px
 
   .small-block
     max-width: 700px
